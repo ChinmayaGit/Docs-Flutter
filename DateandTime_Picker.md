@@ -16,11 +16,11 @@ flutter_datetime_picker: ^1.5.1
 
 Initialization:-
 ```
-dateTimeUpdater dtController= Get.put(dateTimeUpdater());
+DateTimeUpdater dtController= Get.put(DateTimeUpdater());
 ```
 controller:-
 ```
-class dateTimeUpdater extends GetxController {
+class DateTimeUpdater extends GetxController {
   RxString dt = "".obs;
 }
 ```
