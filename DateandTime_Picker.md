@@ -1,5 +1,7 @@
 # DateandTime_Picker
 
+# Types of data
+![alt text](https://raw.githubusercontent.com/ChinmayaGit/Flutter_Info/main/Pics/DateTime.png?token=GHSAT0AAAAAAB6TDPBZW3GDG6YLJKRYGSISY7GTMPA)
 
 
 # Packages
