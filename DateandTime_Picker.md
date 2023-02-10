@@ -36,26 +36,26 @@ Center(
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(20))
             ),
-            child: TextButton(
-                onPressed: () {
-                  DatePicker.showDatePicker(context,
-                      showTitleActions: true,
-                      minTime: DateTime(2023, 1, 1),
-                      maxTime: DateTime(2025, 12, 31), onChanged: (date) {
+            child:Obx(()=> TextButton(
+              onPressed: () {
+                DatePicker.showDatePicker(context,
+                  showTitleActions: true,
+                  minTime: DateTime(2023, 1, 1),
+                  maxTime: DateTime(2025, 12, 31), onChanged: (date) {
                     print('change $date');
                   }, onConfirm: (date) {
 
-                      dtController.dt.value= "${date.day}/${date.month}/${date.year}";
+                    dtController.dt.value= "${date.day}/${date.month}/${date.year}";
                     print('confirm $date');
                   }, currentTime: DateTime.now(),);
-                },
-                child: dtController.dt.value==""? Text(
-                  'Select Date',
-                  style: TextStyle(color: Colors.white),
-                ):Text(
-                  dtController.dt.value,
-                  style: TextStyle(color: Colors.white),
-                ),),
+              },
+              child: dtController.dt.value==""? Text(
+                'Select Date',
+                style: TextStyle(color: Colors.white),
+              ):Text(
+                dtController.dt.value,
+                style: TextStyle(color: Colors.white),
+              ),),),
           ),
         ),
 ```
@@ -70,7 +70,7 @@ Center(
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(20))
             ),
-            child: TextButton(
+            child:Obx(()=>  TextButton(
               onPressed: () {
                 DatePicker.showTime12hPicker(context, showTitleActions: true,
                    onConfirm: (date) {
@@ -84,7 +84,7 @@ Center(
                 ):Text(
                   dtController.dt.value,
                   style: TextStyle(color: Colors.white),
-                ),),
+                 ),),),
           ),
         ),
 
@@ -99,7 +99,7 @@ Center(
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(20))
             ),
-            child: TextButton(
+            child:Obx(()=>  TextButton(
               onPressed: () {
                 DatePicker.showDateTimePicker(context, showTitleActions: true,
                     onChanged: (date) {
@@ -113,7 +113,7 @@ Center(
                 ):Text(
                   dtController.dt.value,
                   style: TextStyle(color: Colors.white),
-                ),),
+                ),),),
           ),
         ),
 ```
