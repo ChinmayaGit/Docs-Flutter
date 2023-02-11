@@ -20,13 +20,13 @@ decoration: ShapeDecoration(
 # Half Rounded Container
 
 ```
-    decoration: const ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(50.0),
-                                topRight: Radius.circular(50.0),
-                              ),
-                            ),
+decoration: const ShapeDecoration(
+   shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(50.0),
+        topRight: Radius.circular(50.0),
+               ),
+          ),
     color: Colors.white,
 ),
 ```
