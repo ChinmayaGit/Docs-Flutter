@@ -4,7 +4,20 @@
 ![alt text](https://raw.githubusercontent.com/ChinmayaGit/Flutter_Info/main/Pics/Nav_Bar-1.png)
 
 ```
-   Row(
+    Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                height: 50,
+                width: Get.width / 1.7,
+                decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    color: Colors.white),
+              ),
+              Row(
                 children: [
                   Expanded(child: SizedBox()),
                   Expanded(
@@ -23,7 +36,7 @@
                         width: 65,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Center(child: Text(dropdownValue ?? "st")),
+                          child: Center(child: Text("1st")),
                         ),
                       ),
                     ),
@@ -34,13 +47,99 @@
                   Expanded(child: SizedBox()),
                 ],
               )
+            ],
+          ),
+        ),
 ```
+
+# NavBar-1.1
+
+![alt text](https://raw.githubusercontent.com/ChinmayaGit/Flutter_Info/main/Pics/Nav_Bar-1.1.png)
+
+
+```
+backgroundColor:-Color(0xff272a50)
+```
+
+```
+ Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                height: 50,
+                width: Get.width / 1.7,
+                decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    color: Colors.white),
+              ),
+              Row(
+                children: [
+                  Expanded(child: SizedBox()),
+                  Expanded(
+                    child: GestureDetector(
+                        onTap: () {}, child: Icon(Icons.arrow_back_ios_sharp)),
+                  ),
+                  Expanded(
+                    child: Center(
+                      child: Container(
+                        height: 70,
+                        width: 70,
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            color: Color(0xff272a50),),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            decoration: ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50.0),
+                                ),
+                                color: Color(0xffe5e5e5)),
+
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Center(child: Text("1st")),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Icon(Icons.arrow_forward_ios_sharp),
+                  ),
+                  Expanded(child: SizedBox()),
+                ],
+              )
+            ],
+          ),
+        ),
+```
+
 # NavBar-2
 
 ![alt text](https://raw.githubusercontent.com/ChinmayaGit/Flutter_Info/main/Pics/Nav_Bar-2.png)
 
 ```
-     Row(
+    Center(
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Container(
+                height: 50,
+                width: Get.width / 1.7,
+                decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                    ),
+                    color: Colors.white),
+              ),
+              Row(
                 children: [
                   Expanded(child: SizedBox()),
                   Expanded(
@@ -77,6 +176,9 @@
                   Expanded(child: SizedBox()),
                 ],
               )
+            ],
+          ),
+        ),
 ```
 # NavBar-3
 
