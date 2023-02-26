@@ -48,7 +48,7 @@ final _firestore = FirebaseFirestore.instance;
                 .collection("bookings")
                 .doc(widget.id)
                 .update({
-              'bill': {
+              "bill": {
                 "1232": {
                   "name": "Toll",
                   "price": "${double.parse(tollController.text)}",
