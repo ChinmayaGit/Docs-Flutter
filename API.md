@@ -1,4 +1,4 @@
-Get Data
+Post/Get Data
 
 ```
   var jsonResponse;
