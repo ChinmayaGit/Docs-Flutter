@@ -1,3 +1,5 @@
+Add data
+
 ```
 
 final _firestore = FirebaseFirestore.instance;
@@ -8,4 +10,15 @@ final _firestore = FirebaseFirestore.instance;
                             "sender": loggedInUser.email,
                             "time": DateTime.now(),
                           });
+```
+set data
+
+```
+    FirebaseFirestore.instance
+                .collection("messages").doc(widget.id)
+                .set({
+              "name": "Toll",
+              "price": "${double.parse(tollController.text)}",
+              "type": "toll",
+            });
 ```
