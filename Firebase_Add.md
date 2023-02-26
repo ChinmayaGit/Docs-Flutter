@@ -1,4 +1,4 @@
-Add data
+## Add Data
 
 ```
 
@@ -11,12 +11,23 @@ final _firestore = FirebaseFirestore.instance;
                             "time": DateTime.now(),
                           });
 ```
-set data
+## Set Data
 
 ```
     FirebaseFirestore.instance
                 .collection("messages").doc(widget.id)
                 .set({
+              "name": "Toll",
+              "price": "${double.parse(tollController.text)}",
+              "type": "toll",
+            });
+```
+## Update Data
+
+```
+ FirebaseFirestore.instance
+                .collection("messages").doc(widget.id)
+                .update({
               "name": "Toll",
               "price": "${double.parse(tollController.text)}",
               "type": "toll",
