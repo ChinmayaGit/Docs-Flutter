@@ -2,6 +2,8 @@ Get Data
 
 ```
   var jsonResponse;
+  
+  String baseUrl="https://us/app";
 
   Future submitDetails() async {
     final uri = Uri.parse(baseUrl + '/generateBill');
