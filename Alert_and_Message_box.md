@@ -86,12 +86,6 @@ Fluttertoast.showToast(
                                           )),
                                         )),
                                   ),
-                                  // FlatButton(
-                                  //   child: new Text("Close"),
-                                  //   onPressed: () {
-                                  //     Navigator.of(context).pop();
-                                  //   },
-                                  // ),
                                 ],
                               );
                             },
