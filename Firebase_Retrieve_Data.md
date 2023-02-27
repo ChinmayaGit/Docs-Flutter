@@ -30,6 +30,23 @@ Firebase get date and time (intl: ^0.17.0 (Needed))
 DateFormat.yMMMd().add_jm().format(snapshot.data!.docs[index]["time"].toDate()).toString()
 ```
 ---
+# Conditions
+
+OrderBy
+```
+.orderBy('time',descending: true)
+```
+
+Where
+```
+.where('status', isEqualTo: rideType)
+```
+
+Limit
+```
+.limit(10)
+```
+---
 
 # Stream Builder
 
