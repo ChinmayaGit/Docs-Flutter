@@ -33,3 +33,10 @@ final _firestore = FirebaseFirestore.instance;
               "type": "toll",
             });
 ```
+## Delete Data
+
+```
+Firestore.instance.collection("chats").document("ROOM_1")  
+    .collection("messages").document(snapshot.data.documents[index]["id"])
+    .delete();
+```
