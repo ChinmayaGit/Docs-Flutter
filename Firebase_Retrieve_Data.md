@@ -366,10 +366,15 @@ print(querySnapshot.data()!["totalAmount"]);
 ```
 ## Get single data (doc)
 ```
-DocumentSnapshot variable = await FirebaseFirestore.instance
+   DocumentSnapshot variable = await FirebaseFirestore.instance
         .collection('drivers')
         .doc(widget.driverUid)
-        .get();
+        .get().then((value) {
+      setState(() {
+        dataFetched = true;
+      });
+      return value;
+    });
         
 ```
 
