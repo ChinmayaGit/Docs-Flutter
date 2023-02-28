@@ -354,7 +354,7 @@ databaseReference
 ```
 
 
-## Get single data
+## Get single data (collection)
 ```
 var querySnapshot = await FirebaseFirestore.instance
         .collection('users')
@@ -363,6 +363,14 @@ var querySnapshot = await FirebaseFirestore.instance
         .get();
 
 print(querySnapshot.data()!["totalAmount"]);
+```
+## Get single data (doc)
+```
+DocumentSnapshot variable = await FirebaseFirestore.instance
+        .collection('drivers')
+        .doc(widget.driverUid)
+        .get();
+        
 ```
 
 
