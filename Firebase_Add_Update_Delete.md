@@ -40,3 +40,18 @@ Firestore.instance.collection("chats").document("ROOM_1")
     .collection("messages").document(snapshot.data.documents[index]["id"])
     .delete();
 ```
+
+Delete collection data
+
+```
+      FirebaseFirestore.instance
+          .collection("bookings")
+          .doc(widget.id)
+          .collection("bill")
+          .snapshots()
+          .forEach((element) {
+        for (QueryDocumentSnapshot snapshot in element.docs) {
+          snapshot.reference.delete();
+        }
+      });
+```
