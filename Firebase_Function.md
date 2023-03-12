@@ -26,7 +26,7 @@ and clean this folder (C:\Users\CHINU\.config\configstore)
 
 ### Firebase Use
 ```
-cd cargo_functions
+cd project_name
 
 firebase use projectname
 
