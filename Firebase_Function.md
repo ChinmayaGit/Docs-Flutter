@@ -61,7 +61,11 @@ npm install -g firebase-tools
 
 firebase login (or firebase logout(to change gmail account))
 
+// if we want to create new alias 
 firebase use --add
+//or use
+firebase use projectname
+ex:-firebase use cargo-d634e
 
 firebase deploy --only functions
 ```
