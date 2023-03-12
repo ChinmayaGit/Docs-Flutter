@@ -63,8 +63,6 @@ firebase login (or firebase logout(to change gmail account))
 
 firebase use --add
 
-firebase init functions
-
 firebase deploy --only functions
 ```
 
