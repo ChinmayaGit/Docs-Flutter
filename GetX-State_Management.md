@@ -1,15 +1,19 @@
 # Global Class
 
 ```
-class dateTimeUpdater extends GetxController {
+class Updater extends GetxController {
   RxString dt = "".obs;
 }
 ```
-Controller:-
+get value:-
 ```
-dateTimeUpdater dtController= Get.put(dateTimeUpdater());
+Updater dtController= Get.put(Updater());
+
+Obx(() => Text(child:"pageController.page.value"))
 ```
-code:-
+add value:-
 ```
-Obx(() => pageController.page.value = 0)
+Updater dtController= Get.put(Updater());
+
+tpController.fetchData.value=true;
 ```
