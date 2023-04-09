@@ -2,6 +2,10 @@
 
 ![alt text](https://github.com/ChinmayaGit/Flutter_Info/blob/main/Pics/TextField.png?raw=true)
 
+
+```
+final TextEditingController _nameController = TextEditingController();
+```
 Rounded
 ```
   textFields({
