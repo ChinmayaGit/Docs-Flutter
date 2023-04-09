@@ -21,3 +21,7 @@
               }
             });
 ```
+## fetch
+```
+ print(querySnapshot.docs[0]["user"]["id"].toString());
+```
