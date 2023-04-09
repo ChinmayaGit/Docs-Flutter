@@ -1,14 +1,7 @@
 packages
 ```
-flutter pub add image
-flutter pub add image_picker
-flutter pub add path_provider
+flutter pub add flutter_image_compress
 
-```
-import
-```
-import 'package:image/image.dart' as Im;
-import 'dart:math' as Math;
 ```
 
 ```
@@ -35,22 +28,27 @@ Center(
 image Compress
 ```
   Future getImage(ImageSource media) async {
+
+
     var img = await picker.pickImage(source: media);
-    var selectedImage = File(img!.path);
-    final tempDir = await getTemporaryDirectory();
-    final path = tempDir.path;
-    int rand = new Math.Random().nextInt(10000);
 
-    Im.Image? imageTwo = Im.decodeImage(selectedImage.readAsBytesSync());
-    Im.Image smallerImage = Im.copyResize(imageTwo!,
-        width: 250,
-        height: 250); // choose the size here, it will maintain aspect ratio
+    if (img != null) {
+      final File imageFile = File(img.path);
+      final compressedImageData = await FlutterImageCompress.compressWithFile(
+        imageFile.path,
+        minHeight: 256,
+        minWidth: 256,
+        quality: 80,
+        format: CompressFormat.png,
+      );
+      final File compressedImageFile = File(imageFile.path)
+        ..writeAsBytesSync(compressedImageData!);
+      var selectedImageTwo = XFile(compressedImageFile.path);
+      setState(() {
+        image = selectedImageTwo;
+      });
+    }
 
-    var compressedImage = new File('$path/img_$rand.jpg')
-      ..writeAsBytesSync(Im.encodeJpg(imageTwo, quality: 85));
-    var selectedImageTwo = XFile(compressedImage.path);
-    setState(() {
-      image = selectedImageTwo;
-    });
   }
+
 ```
