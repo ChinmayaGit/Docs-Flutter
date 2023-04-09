@@ -49,7 +49,7 @@ Array Data
 array(index/array/index/map)
 ```
   QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection("user").get();
-  print(querySnapshot.docs[0]["gmail"][0]["pass"].toString());
+  print(querySnapshot.docs[index]["gmail"][indexTwo]["pass"].toString());
 ```
 ## Fetch Data By StreamBuilder()
 ```
