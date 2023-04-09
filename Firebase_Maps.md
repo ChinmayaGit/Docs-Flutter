@@ -23,5 +23,6 @@
 ```
 ## fetch
 ```
- print(querySnapshot.docs[0]["user"]["id"].toString());
+  QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection("user").get();
+  print(querySnapshot.docs[0]["name"]["id"].toString());
 ```
