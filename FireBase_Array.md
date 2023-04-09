@@ -45,6 +45,15 @@ Array Data
       }
     });
 ```
+array(index/array/index)
+```
+snapshot.data!.docs[index]["x"][0].toString()
+```
+
+array(index/array/index/map)
+```
+snapshot.data!.docs[index]["x"][0]["xc"].toString()
+```
 ## Fetch Data By StreamBuilder()
 ```
 getExpenseItems(
