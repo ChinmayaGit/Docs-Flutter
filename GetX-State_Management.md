@@ -9,7 +9,7 @@ get value:-
 ```
 Updater dtController= Get.put(Updater());
 
-Obx(() => Text(child:"pageController.page.value"))
+Obx(() => Text("pageController.page.value"))
 ```
 add value:-
 ```
