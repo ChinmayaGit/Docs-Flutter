@@ -1,7 +1,7 @@
 # Fluttertoast
 
 ```
-fluttertoast: ^8.1.1
+flutter pub add fluttertoast
 ```
 
 ```
